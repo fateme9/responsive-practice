@@ -1,0 +1,48 @@
+.container {
+    display: flex;
+    flex-direction: column;
+    height: 200px;
+    flex-flow: wrap;
+}
+
+.box {
+    background-color: aqua;
+}
+
+.box1 {
+    background-color: blue;
+    order: -1;
+}
+
+.box2 {
+    background-color: violet;
+}
+
+.container>div {
+    display: flex;
+    width: 100%;
+    align-items: center;
+    justify-content: center;
+}
+
+@media screen and (min-width:800px) {
+    .container {
+        flex-direction: wrap;
+    }
+    div.box {
+        background-color: aqua;
+        flex-basis: 100%;
+        width: 50%;
+    }
+    div.box1 {
+        background-color: blue;
+        order: 0;
+        flex-basis: 50%;
+        width: 50%;
+    }
+    div.box2 {
+        background-color: violet;
+        flex-basis: 50%;
+        width: 50%;
+    }
+}
